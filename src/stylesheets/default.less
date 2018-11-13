@@ -6,22 +6,8 @@ body {
     height: 100%;
     color: @accent-thirdindary;
     font-family: Roboto;
-}
-body:before {
-    content: "";
-    position: absolute;
-    background: url(../assets/ig/1.jpg) @background-primary;
+    background: url(../assets/ig/1.png) no-repeat left center @background-primary;
     background-size: cover;
-    background-position: 50% 50%;
-    z-index: -1; /* Keep the background behind the content */
-    height: 20%; width: 20%; /* Using Glen Maddern's trick /via @mente */
-
-    /* don't forget to use the prefixes you need */
-    transform: scale(5.2);
-    transform-origin: top left;
-    -webkit-transform-origin-x: .5rem;
-    -webkit-transform-origin-y: .5rem;
-    filter: blur(2px);
 }
 
 
@@ -29,4 +15,49 @@ body:before {
 header {
     height: 4rem;
     font-size: 4rem;
+    background: rgba(50,50,50,.8);
+    padding-bottom: .7rem;
+}
+
+
+@cat-height: 2.7rem;
+.categories {
+    padding-top: 1.2rem;
+    margin-top: .3rem;
+    height: @cat-height;
+    background: rgba(35,35,35,.8);
+    user-select: none;
+    
+}
+
+a {
+    text-decoration: none;
+    color: @accent-secondary;
+}
+
+
+
+a.category {
+    @cat-pad-side: 3.2rem;
+    @cat-pad-lat: .9rem;
+    @cat-marg: .7rem;
+    font-size: 1.2rem;
+    margin-left: @cat-marg;
+    padding-left: @cat-pad-side;
+    padding-right: @cat-pad-side;
+    padding-top: @cat-pad-lat;
+    padding-bottom: @cat-pad-lat;
+    height: @cat-height;
+    background: rgba(35,35,35,.5);
+    user-select: none;
+    &:hover {
+        @cat-pad-side: 3.15rem;
+        @cat-pad-lat: .85rem;
+        padding-left: @cat-pad-side;
+        padding-right: @cat-pad-side;
+        padding-top: @cat-pad-lat;
+        padding-bottom: @cat-pad-lat;
+        background: rgba(35,35,35,.7);
+        transition: 80ms;
+    }
 }

@@ -1,0 +1,22 @@
+{
+  "name": "robotics-web",
+  "version": "1.0.0",
+  "description": "LHS Robotics Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MulverineX/robotics-web.git"
+  },
+  "author": "MulverineX",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MulverineX/robotics-web/issues"
+  },
+  "homepage": "https://github.com/MulverineX/robotics-web#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}

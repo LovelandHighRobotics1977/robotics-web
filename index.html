@@ -1,5 +1,4 @@
 <html>
-
     <head>
         <title>LHS Robotics 1977</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -11,22 +10,32 @@
         <link rel="icon" type="image/png" sizes="32x32" href="src/assets/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="src/assets/favicon-16x16.png">
         <link rel="manifest" href="src/assets/site.webmanifest">
-        <link rel="shortcut icon" href="src/assets/favicon.ico">
+        <link rel="shortcut icon" href="../assets/favicon.ico">
         <meta name="apple-mobile-web-app-title" content="LHS Robotics">
         <meta name="application-name" content="LHS Robotics">
         <meta name="msapplication-TileColor" content="#ed1c24">
         <meta name="msapplication-config" content="src/assets/browserconfig.xml">
         <meta name="theme-color" content="#414042">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js"></script>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+        <script src="src/js/main3.js"></script>
     </head>
 
 
-    <body>
-        <header>
-            <center>Loveland Robotics</center>
-        </header>
+<body>
+    <header>
+        <center>Loveland Robotics</center>
+    </header>
+    <div class="categories">
+        <center>
+            <a class="current home category" id="category">Home</a>
+            <a class="category gallery">Gallery</a>
+            <a class="category links">Links</a>
+            <a class="category contact">Contact</a>
+        </center>
+    </div>
+
+    <div class="content"></div>
     </body>
 </html>
