@@ -3,6 +3,7 @@
 
 let current_page = "home";
 
-$('#category').click(function () {
-    console.log('hohoho');
-});
+document.getElementByClassName("home").onmousedown = function () {
+    console.log("home");
+    return true; // Not needed, as long as you don't return false
+};
