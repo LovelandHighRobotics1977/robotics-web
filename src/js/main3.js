@@ -3,7 +3,7 @@
 
 let current_page = "home";
 
-document.getElementByClassName("home").onmousedown = function () {
+document.getElementsByClassName("home")[0].onMouseDown = function () {
     console.log("home");
     return true; // Not needed, as long as you don't return false
 };
