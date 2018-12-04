@@ -4,7 +4,7 @@ body {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
     height: 100%;
-    color: @accent-thirdindary;
+    color: @white;
     font-family: Roboto;
     background: url(../assets/ig/1.png) no-repeat left center @background-primary;
     background-size: cover;
@@ -15,15 +15,18 @@ body {
 header {
     height: 4rem;
     font-size: 4rem;
-    background: rgba(50,50,50,.8);
     padding-bottom: .7rem;
+}
+
+.banner {
+    width: 40%;
 }
 
 
 @cat-height: 2.7rem;
 .categories {
     padding-top: 1.2rem;
-    margin-top: .3rem;
+    margin-top: 5rem;
     height: @cat-height;
     background: rgba(35,35,35,.8);
     user-select: none;
@@ -32,7 +35,7 @@ header {
 
 a {
     text-decoration: none;
-    color: @accent-secondary;
+    color: @white;
 }
 
 
@@ -68,11 +71,33 @@ a.category {
 }
 
 .short_syn {
+    background: rgba(35,35,35,.7);
+    margin-top: .8rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+}
+
+.home-desc {
     background: rgba(35,35,35,.6);
+    margin-top: .8rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
 }
 
 .infocard {
     background: rgba(35,35,35,.5);
     padding: .5rem;
+    margin-right: .4rem;
+    margin-bottom: .4rem;
     float: left
+}
+
+.quotes {
+    margin-bottom: .5rem;
+}
+.quote {
+    width: 80%
+}
+.fb-logo {
+    width: 20%;
 }
