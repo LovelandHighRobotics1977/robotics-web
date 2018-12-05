@@ -1,16 +1,16 @@
 @import "colors";
-
 body {
     position: absolute;
-    top: 0; bottom: 0; left: 0; right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     height: 100%;
     color: @white;
     font-family: Roboto;
-    background: url(../assets/ig/1.png) no-repeat left center @background-primary;
+    background: url(../assets/ig/1.png) no-repeat left center #1e2148;
     background-size: cover;
 }
-
-
 
 header {
     height: 4rem;
@@ -22,15 +22,33 @@ header {
     width: 40%;
 }
 
-
 @cat-height: 2.7rem;
 .categories {
-    padding-top: 1.2rem;
-    margin-top: 5rem;
-    height: @cat-height;
-    background: rgba(35,35,35,.8);
+    padding: .5rem 0 .5rem 0;
+    background: rgba(35, 35, 35, .8);
     user-select: none;
-    
+    a.category {
+        @cat-pad-side: 3.2rem;
+        @cat-pad-lat: .9rem;
+        @cat-marg: .7rem;
+        font-size: 1.2rem;
+        display: inline-flex;
+        padding: @cat-pad-lat @cat-pad-side @cat-pad-lat @cat-pad-side;
+        margin-left: @cat-marg;
+        vertical-align: middle;
+        background: rgba(35, 35, 35, .5);
+        user-select: none;
+        &:hover {
+            @cat-pad-side: 3.15rem;
+            @cat-pad-lat: .85rem;
+            padding-left: @cat-pad-side;
+            padding-right: @cat-pad-side;
+            padding-top: @cat-pad-lat;
+            padding-bottom: @cat-pad-lat;
+            background: rgba(35, 35, 35, .7);
+            transition: 80ms;
+        }
+    }
 }
 
 a {
@@ -38,54 +56,30 @@ a {
     color: @white;
 }
 
-
-
-a.category {
-    @cat-pad-side: 3.2rem;
-    @cat-pad-lat: .9rem;
-    @cat-marg: .7rem;
-    font-size: 1.2rem;
-    margin-left: @cat-marg;
-    padding-left: @cat-pad-side;
-    padding-right: @cat-pad-side;
-    padding-top: @cat-pad-lat;
-    padding-bottom: @cat-pad-lat;
-    height: @cat-height;
-    background: rgba(35,35,35,.5);
-    user-select: none;
-    &:hover {
-        @cat-pad-side: 3.15rem;
-        @cat-pad-lat: .85rem;
-        padding-left: @cat-pad-side;
-        padding-right: @cat-pad-side;
-        padding-top: @cat-pad-lat;
-        padding-bottom: @cat-pad-lat;
-        background: rgba(35,35,35,.7);
-        transition: 80ms;
-    }
+center {
+    vertical-align: -webkit-baseline-middle;
 }
 
 .content {
     overflow: hidden;
-    
 }
 
 .short_syn {
-    background: rgba(35,35,35,.7);
+    background: rgba(35, 35, 35, .7);
     margin-top: .8rem;
     padding-top: .8rem;
     padding-bottom: .8rem;
 }
 
 .home-desc {
-    background: rgba(35,35,35,.6);
+    background: rgba(35, 35, 35, .6);
     margin-top: .8rem;
     padding-top: .8rem;
     padding-bottom: .8rem;
 }
 
 .infocard {
-    background: rgba(35,35,35,.5);
+    background: rgba(35, 35, 35, .5);
     padding: .5rem;
     margin-right: .4rem;
     margin-bottom: .4rem;
@@ -95,12 +89,15 @@ a.category {
 .quotes {
     margin-bottom: .5rem;
 }
+
 .quote {
     width: 80%;
 }
+
 .fb-logo {
     width: 15%;
 }
+
 .linktext {
     padding-right: 40%;
     float: right;
