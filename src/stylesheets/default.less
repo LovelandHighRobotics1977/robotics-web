@@ -80,10 +80,14 @@ center {
 
 .infocard {
     background: rgba(35, 35, 35, .5);
-    padding: .5rem;
+    padding: .5rem .5rem 0 .5rem;
     margin-right: .4rem;
     margin-bottom: .4rem;
-    float: left
+    margin-top: none;
+    float: left;
+    &.link {
+        width: 100%;
+    }
 }
 
 .quotes {
@@ -94,11 +98,11 @@ center {
     width: 80%;
 }
 
-.fb-logo {
-    width: 15%;
+.logo {
+    height: 6rem;
 }
 
 .linktext {
-    padding-right: 40%;
-    float: right;
+    display: inline-block;
+    padding-top: none;
 }
