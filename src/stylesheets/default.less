@@ -58,6 +58,34 @@ a {
     color: @white;
 }
 
+::-webkit-scrollbar {
+    width: .4rem;
+    height: .6rem;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+    border: none;
+    &:hover {
+        background: rgba(255,255,255,.1);
+        border-radius: .3rem;
+        transition: 500ms;
+    }
+}
+
+::-webkit-scrollbar-thumb {
+    background: @accent-primary; 
+    border-radius: .3rem;
+    &:hover {
+        background: @accent-secondary;
+        transition: 700ms;
+    }
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(0,0,0,0);
+}
+
 center {
     vertical-align: -webkit-baseline-middle;
 }
