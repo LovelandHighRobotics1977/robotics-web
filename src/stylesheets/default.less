@@ -1,4 +1,6 @@
 @import "colors";
+
+
 body {
     position: absolute;
     top: 0;
@@ -88,6 +90,9 @@ center {
     &.link {
         width: 100%;
     }
+    & > p {
+        font-size: x-large;
+    }
 }
 
 .quotes {
@@ -100,9 +105,31 @@ center {
 
 .logo {
     height: 6rem;
+    padding-left: .7rem;
 }
 
 .linktext {
     display: inline-block;
-    padding-top: none;
+    padding: .7rem 2rem 0 .7rem;
+    & > p {
+        font-size: x-large;
+    }
+}
+
+.video-container {
+    background: rgba(35, 35, 35, .6);
+    margin-top: .8rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+}
+
+.video {
+    width: 40rem;
+    height: 22.5rem;
+    transition: 500ms;
+    &:hover {
+        transition: 500ms;
+        width: 45rem;
+        height: 25.4rem;
+    }
 }
