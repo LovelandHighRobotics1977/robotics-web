@@ -1,6 +1,4 @@
 @import "colors";
-
-
 body {
     position: absolute;
     top: 0;
@@ -28,6 +26,7 @@ header {
 .categories {
     padding: .5rem 0 .5rem 0;
     background: rgba(35, 35, 35, .8);
+    border-radius: .5rem;
     user-select: none;
     a.category {
         @cat-pad-side: 3.2rem;
@@ -39,6 +38,7 @@ header {
         margin-left: @cat-marg;
         vertical-align: middle;
         background: rgba(35, 35, 35, .5);
+        border-radius: .4rem;
         user-select: none;
         &:hover {
             @cat-pad-side: 3.15rem;
@@ -51,6 +51,10 @@ header {
             transition: 80ms;
         }
     }
+}
+
+.space {
+    margin-bottom: .5rem;
 }
 
 a {
@@ -67,14 +71,14 @@ a {
     background: none;
     border: none;
     &:hover {
-        background: rgba(255,255,255,.1);
+        background: rgba(255, 255, 255, .1);
         border-radius: .3rem;
         transition: 500ms;
     }
 }
 
 ::-webkit-scrollbar-thumb {
-    background: @accent-primary; 
+    background: @accent-primary;
     border-radius: .3rem;
     &:hover {
         background: @accent-secondary;
@@ -83,7 +87,7 @@ a {
 }
 
 ::-webkit-scrollbar-corner {
-  background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
 }
 
 center {
@@ -99,6 +103,7 @@ center {
     margin-top: .8rem;
     padding-top: .8rem;
     padding-bottom: .8rem;
+    border-radius: .5rem;
 }
 
 .home-desc {
@@ -106,10 +111,12 @@ center {
     margin-top: .8rem;
     padding-top: .8rem;
     padding-bottom: .8rem;
+    border-radius: .5rem;
 }
 
 .infocard {
     background: rgba(35, 35, 35, .5);
+    border-radius: .5rem .5rem .5rem .5rem;
     padding: .5rem .5rem 0 .5rem;
     margin-right: .4rem;
     margin-bottom: .4rem;
@@ -118,13 +125,14 @@ center {
     &.link {
         width: 100%;
     }
-    & > p {
+    &>p {
         font-size: x-large;
     }
 }
 
 .quotes {
     margin-bottom: .5rem;
+    border-radius: .5rem;
 }
 
 .quote {
@@ -139,7 +147,7 @@ center {
 .linktext {
     display: inline-block;
     padding: .7rem 2rem 0 .7rem;
-    & > p {
+    &>p {
         font-size: x-large;
     }
 }
@@ -149,6 +157,7 @@ center {
     margin-top: .8rem;
     padding-top: .8rem;
     padding-bottom: .8rem;
+    border-radius: .5rem;
 }
 
 .video {
@@ -159,5 +168,6 @@ center {
         transition: 500ms;
         width: 45rem;
         height: 25.4rem;
+        box-shadow: -.3rem .3rem .1rem rgba(35, 35, 35, .4);
     }
 }
