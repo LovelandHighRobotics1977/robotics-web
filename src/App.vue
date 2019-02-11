@@ -1,4 +1,48 @@
-@import "colors";
+<template>
+  <div id="app">
+    <div>
+      <center>
+        <img src="assets/images/banner.svg" class="banner">
+      </center>
+    </div>
+    <categories :categories="categories"/>
+    <router-view></router-view>
+  </div>
+</template>
+
+<script>
+import Categories from "./components/layout/Categories.vue";
+
+export default {
+  name: "robotics-web",
+  components: {
+    Categories
+  },
+  data() {
+    return {
+      categories: ["Home", "Gallery", "Sponsors", "Links", "Contact"]
+    };
+  }
+};
+</script>
+
+<style lang="less">
+@black: #000;
+@white: #fcfcfc;
+
+@background-primary: #1e2148;
+@accent-primary: #be1e2d;
+@accent-secondary: #ed1c24;
+@accent-thirdindary: #f03e45;
+
+// Transparents
+@scroll-shade: rgba(255, 255, 255, .1);
+@gray4: rgba(35, 35, 35, .4);
+@gray5: rgba(35, 35, 35, .5);
+@gray6: rgba(35, 35, 35, .6);
+@gray7: rgba(35, 35, 35, .7);
+@gray8: rgba(35, 35, 35, .8);
+
 body {
     position: absolute;
     top: 0;
@@ -187,3 +231,4 @@ center {
         box-shadow: -.3rem .3rem .1rem @gray4;
     }
 }
+</style>

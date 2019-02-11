@@ -1,44 +1,4 @@
-<html>
-
-<head>
-    <title>LHS Robotics 1977</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
-
-    <link rel="stylesheet/less" type="text/css" href="src/stylesheets/colors.less" />
-    <link rel="stylesheet/less" type="text/css" href="src/stylesheets/default.less" />
-
-    <link rel="apple-touch-icon" sizes="180x180" href="src/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/favicon-16x16.png">
-    <link rel="manifest" href="src/assets/site.webmanifest">
-    <link rel="shortcut icon" href="../assets/favicon.ico">
-    <meta name="apple-mobile-web-app-title" content="LHS Robotics">
-    <meta name="application-name" content="LHS Robotics">
-    <meta name="msapplication-TileColor" content="#ed1c24">
-    <meta name="msapplication-config" content="src/assets/browserconfig.xml">
-    <meta name="theme-color" content="#414042">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="src/js/main3.js"></script>
-</head>
-
-
-<body>
-    <div>
-        <center><img src="src/assets/images/banner.svg" class="banner"></img></center>
-    </div>
-    <div class="categories space">
-        <center>
-            <a class="category home " href="index.html">Home</a>
-            <a class="category gallery" href="gallery.html">Gallery</a>
-            <a class="category sponsors" href="sponsors.html">Sponsors</a>
-            <a class="category links">Links</a>
-            <a class="category contact" href="contact.html">Contact</a>
-        </center>
-    </div>
-
+<template>
     <div class="content">
         <a href="https://www.instagram.com/roboticsoflhs/" target="_blank"><div class="infocard link">
             <img src="src/assets/images/insta-logo.svg" class="logo">
@@ -87,6 +47,14 @@
             </div>
         </div></a>
     </div>
-</body>
+</template>
 
-</html>
+<script>
+export default {
+    name: "links"
+}
+</script>
+
+<style>
+
+</style>
