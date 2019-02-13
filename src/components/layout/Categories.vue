@@ -1,7 +1,7 @@
 <template>
     <div class="categories">
         <center>
-            <router-link v-for="category of categories" v-bind:key="category" replace :to="'/' + category">
+            <router-link :class="'category ' +  category" v-for="category of categories" v-bind:key="category" replace :to="'/' + category">{{ category }}</router-link>
         </center>
     </div>
 </template>

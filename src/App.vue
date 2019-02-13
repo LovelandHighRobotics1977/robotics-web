@@ -2,10 +2,10 @@
   <div id="app">
     <div>
       <center>
-        <img src="assets/images/banner.svg" class="banner">
+        <img src="./assets/images/banner.svg" class="banner">
       </center>
     </div>
-    <categories :categories="categories"/>
+    <categories/>
     <router-view></router-view>
   </div>
 </template>
@@ -15,6 +15,14 @@ import Categories from "./components/layout/Categories.vue";
 
 export default {
   name: "robotics-web",
+  metaInfo: {
+    title: 'My Example App', // set a title
+    titleTemplate: '%s - Yay!', // title is now "My Example App - Yay!"
+    htmlAttrs: {
+        lang: 'en',
+        amp: undefined // "amp" has no value
+    }
+  },
   components: {
     Categories
   },
@@ -52,7 +60,7 @@ body {
     height: 100%;
     color: @white;
     font-family: Roboto;
-    background: url(../assets/ig/1.png) no-repeat left center @background-primary;
+    background: url('./assets/ig/1.png') no-repeat left center @background-primary;
     background-size: cover;
 }
 

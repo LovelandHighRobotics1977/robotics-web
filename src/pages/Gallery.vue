@@ -1,10 +1,10 @@
 <template>
     <div class="content">
         <center>
-            <div class="infocard"><img src="assets/ig/2.jpg" class="gimg"></div>
-            <div class="infocard"><img src="assets/ig/3.jpg" class="gimg"></div>
-            <div class="infocard"><img src="assets/ig/4.jpg" class="gimg"></div>
-            <div class="infocard"><img src="assets/ig/5.jpg" class="gimg"></div>
+            <div class="infocard"><img src="./../assets/ig/2.jpg" class="gimg"></div>
+            <div class="infocard"><img src="./../assets/ig/3.jpg" class="gimg"></div>
+            <div class="infocard"><img src="./../assets/ig/4.jpg" class="gimg"></div>
+            <div class="infocard"><img src="./../assets/ig/5.jpg" class="gimg"></div>
         </center>
     </div>
 </template>

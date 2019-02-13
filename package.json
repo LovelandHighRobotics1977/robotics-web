@@ -15,24 +15,15 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "prestart": "npm i",
-    "build": "node build/build.js",
-    "build:android": "npm run build && npm run compile:android",
-    "alt": "npm run build:android && adb install app-debug.apk",
-    "build:electron": "npm run build && cp -R www electron/",
-    "build:ios": "npm run build && npx cap copy ios && npx cap update ios && npx cap open ios",
-    "build:all": "npm run build:android && npm run build:electron",
-    "compile:android": "rm -rf *.apk && npx cap copy android && npx cap update android && cd android && gradlew assembleDebug && mv ./app/build/outputs/apk/debug/app-debug.apk ../",
-    "run:electron": "cd electron && npx electron ./",
-    "init": "npm i && npx cap add android && npx cap add electron && npx cap add ios"
+    "build": "node build/build.js"
   },
   "dependencies": {
     "mobile-detect": "^1.4.3",
     "querystring": "^0.2.0",
     "request": "^2.88.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1",
-    "youtube-crawl": "0.0.1",
-    "ytsr": "^0.1.8"
+    "vue-meta": "^1.5.8",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

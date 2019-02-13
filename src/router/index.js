@@ -1,12 +1,10 @@
-import Songs from "@/pages/Library/Songs";
 import Vue from "vue";
 import Router from "vue-router";
 Vue.use(Router);
 
 export default new Router({
-    routes: [
-        {
-            path: "*",
+    routes: [{
+            path: "",
             redirect: "/Home"
         },
         {
@@ -18,6 +16,11 @@ export default new Router({
             path: "/Gallery",
             name: "Gallery",
             component: require("@/pages/Gallery").default
+        },
+        {
+            path: "/Sponsors",
+            name: "Sponsors",
+            component: require("@/pages/Sponsors").default
         },
         {
             path: "/Contact",
