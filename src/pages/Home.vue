@@ -1,12 +1,13 @@
 <template>
   <div class="content">
     <title>Loveland High School Robotics</title>
-    <div class="short_syn">
+    <div class="short-syn">
       <center>
         <h3>
-          Welcome to the Loveland High School Robotics FIRST Team 1977 the Powersquids!
-          <br>We are a student led program dedicated to investigating, planning, creating, and
-          leading.
+          <span v-for="(line, index) of synopsis" v-bind:key="line">
+            {{ line }}
+            <br v-if="index != synopsis.length-1">
+          </span>
         </h3>
       </center>
     </div>
@@ -16,7 +17,10 @@
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube-nocookie.com/embed/8mz_f2Z2RDM?autoplay=0&enablejsapi=1&modestbranding=1&showinfo=0&theme=light&controls=0&disablekb=1"
+            :src="
+              'https://www.youtube-nocookie.com/embed/' 
+              + videoid 
+              + '?autoplay=0&enablejsapi=1&modestbranding=1&showinfo=0&theme=light&controls=0&disablekb=1'"
             frameborder="0"
           ></iframe>
         </div>
@@ -24,12 +28,7 @@
     </div>
     <div class="home-desc">
       <center>
-        <p>
-          We compete in the annual FIRST Robotics competition each Spring at Denver University. Starting from scratch,
-          each year we brainstorm and collaborate to create a robot in six weeks to compete. Aside from competing, we also
-          host a summer camp to provide younger students with an opportunity to build and run through the design process
-          similar to our team for competition.
-        </p>
+        <p>{{ home_desc }}</p>
       </center>
     </div>
 
@@ -48,37 +47,12 @@
 </template>
 
 <script>
+import home_data from "./../data/home.js";
+
 export default {
   name: "home",
   data() {
-    return {
-      quotes: [
-        {
-          text: "The Loveland Robotics team is efficient, proficient, sufficient, omniscient and hard-working. When I joined the robotics team as a young man (oh, it seemed to be a lifetime ago), I saw the promise and dedication in the faces and work-ethic of these individuals known to me now as my peers.",
-          author: {
-            title: "Programming Team Co-Captain",
-            name: "Dylan",
-            grad: 2020
-          }
-        },
-        {
-          text: "Robotics is super awesome!",
-          author: {
-            title: "CAD Team Member",
-            name: "Lexi",
-            grad: 2021
-          }
-        },
-        {
-          text: "Being a part of the Loveland High Robotics Team has tought me what dedication and commitment realy means, even through the hardships.",
-          author: {
-            title: "Aux Captain",
-            name: "Will",
-            grad: 2020
-          }
-        }
-      ]
-    }
+    return home_data;
   }
 };
 </script>
@@ -114,7 +88,7 @@ export default {
   border-radius: 0.5rem;
 }
 
-.short_syn {
+.short-syn {
   background: @gray7;
   margin-top: 0.8rem;
   padding-top: 0.8rem;
