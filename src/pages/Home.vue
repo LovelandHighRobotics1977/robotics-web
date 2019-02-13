@@ -37,24 +37,10 @@
       <center>
         <h2>Member Quotes</h2>
       </center>
-      <center>
+      <center v-for="quote of quotes" v-bind:key="quote">
         <p class="quote">
-          "The Loveland Robotics team is efficient, proficient, sufficient,
-          omniscient and hard-working. When I joined the robotics team as a young man (oh, it seemed to be a lifetime ago),
-          I saw the promise and dedication in the faces and work-ethic of these individuals known to me now as my peers."
-          <br>- Programming Team Co-Captain, Dylan (2020 grad)
-        </p>
-      </center>
-      <center>
-        <p class="quote">"Robotics is super awesome!"
-          <br>- CAD Team Member, Lexi (2021 grad)
-        </p>
-      </center>
-      <center>
-        <p class="quote">
-          "Being a part of the Loveland High Robotics Team has tought me what dedication and commitment realy means, even
-          through the hardships."
-          <br>- Aux Captian, Will (2020 grad)
+          "{{ quote.text }}"
+          <br>- {{ quote.author.title }}, {{ quote.author.name }} ({{ quote.author.grad }} grad)
         </p>
       </center>
     </div>
@@ -63,7 +49,37 @@
 
 <script>
 export default {
-  name: "home"
+  name: "home",
+  data() {
+    return {
+      quotes: [
+        {
+          text: "The Loveland Robotics team is efficient, proficient, sufficient, omniscient and hard-working. When I joined the robotics team as a young man (oh, it seemed to be a lifetime ago), I saw the promise and dedication in the faces and work-ethic of these individuals known to me now as my peers.",
+          author: {
+            title: "Programming Team Co-Captain",
+            name: "Dylan",
+            grad: 2020
+          }
+        },
+        {
+          text: "Robotics is super awesome!",
+          author: {
+            title: "CAD Team Member",
+            name: "Lexi",
+            grad: 2021
+          }
+        },
+        {
+          text: "Being a part of the Loveland High Robotics Team has tought me what dedication and commitment realy means, even through the hardships.",
+          author: {
+            title: "Aux Captain",
+            name: "Will",
+            grad: 2020
+          }
+        }
+      ]
+    }
+  }
 };
 </script>
 

@@ -40,7 +40,7 @@ body {
   height: 100%;
   color: @white;
   font-family: Roboto;
-  background: url("./assets/ig/1.png") no-repeat left center @background-primary;
+  background: url("./assets/ig/1.png") no-repeat left top @background-primary;
   background-size: cover;
 }
 
@@ -115,7 +115,7 @@ center {
 .infocard {
   background: @gray5;
   border-radius: 0.5rem;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  padding: 0.5rem 0.5rem .5rem 0.5rem;
   margin-right: 0.4rem;
   margin-bottom: 0.4rem;
   margin-top: none;

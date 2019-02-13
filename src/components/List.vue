@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@gray5: rgba(35, 35, 35, 0.5);
+@import "./../stylesheets/colors.less";
 
 .logo {
   height: 6rem;
@@ -60,7 +60,7 @@ export default {
 
 .listing {
   background: @gray5;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   padding: 1.2rem 0rem 1.2rem 0.5rem;
   margin-right: 0.4rem;
   margin-bottom: 0.4rem;
@@ -70,6 +70,12 @@ export default {
   cursor: pointer;
   & p {
     font-size: x-large;
+  }
+  &:hover {
+    background: @gray6;
+    border-radius: 0.5rem;
+    transition: border-radius 50ms;
+    transition: background 50ms;
   }
 }
 </style>
