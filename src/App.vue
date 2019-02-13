@@ -2,7 +2,9 @@
   <div id="app">
     <div>
       <center>
-        <img src="./assets/images/banner.svg" class="banner">
+        <router-link replace to="/Home">
+          <img src="./assets/images/banner.svg" class="banner">
+        </router-link>
       </center>
     </div>
     <categories :categories="categories"/>
