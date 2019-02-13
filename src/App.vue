@@ -5,7 +5,7 @@
         <img src="./assets/images/banner.svg" class="banner">
       </center>
     </div>
-    <categories/>
+    <categories :categories="categories"/>
     <router-view></router-view>
   </div>
 </template>
@@ -15,14 +15,6 @@ import Categories from "./components/layout/Categories.vue";
 
 export default {
   name: "robotics-web",
-  metaInfo: {
-    title: 'My Example App', // set a title
-    titleTemplate: '%s - Yay!', // title is now "My Example App - Yay!"
-    htmlAttrs: {
-        lang: 'en',
-        amp: undefined // "amp" has no value
-    }
-  },
   components: {
     Categories
   },
@@ -35,208 +27,114 @@ export default {
 </script>
 
 <style lang="less">
-@black: #000;
-@white: #fcfcfc;
-
-@background-primary: #1e2148;
-@accent-primary: #be1e2d;
-@accent-secondary: #ed1c24;
-@accent-thirdindary: #f03e45;
-
-// Transparents
-@scroll-shade: rgba(255, 255, 255, .1);
-@gray4: rgba(35, 35, 35, .4);
-@gray5: rgba(35, 35, 35, .5);
-@gray6: rgba(35, 35, 35, .6);
-@gray7: rgba(35, 35, 35, .7);
-@gray8: rgba(35, 35, 35, .8);
+@import "./stylesheets/colors.less";
 
 body {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    color: @white;
-    font-family: Roboto;
-    background: url('./assets/ig/1.png') no-repeat left center @background-primary;
-    background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  color: @white;
+  font-family: Roboto;
+  background: url("./assets/ig/1.png") no-repeat left center @background-primary;
+  background-size: cover;
 }
 
 h2 {
-    font-family: "Cuprum";
-    font-weight: normal;
-    font-size: 1.7rem;
+  font-family: "Cuprum";
+  font-weight: normal;
+  font-size: 1.7rem;
 }
 
 h3 {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 header {
-    height: 4rem;
-    font-size: 4rem;
-    padding-bottom: .7rem;
+  height: 4rem;
+  font-size: 4rem;
+  padding-bottom: 0.7rem;
+}
+
+.categories {
+  padding: 0.5rem 0 0.5rem 0;
+  background: @gray8;
+  border-radius: 0.5rem;
+  user-select: none;
 }
 
 .banner {
-    width: 40%;
-}
-
-@cat-height: 2.7rem;
-.categories {
-    padding: .5rem 0 .5rem 0;
-    background: @gray8;
-    border-radius: .5rem;
-    user-select: none;
-    a.category {
-        @cat-pad-side: 3.2rem;
-        @cat-pad-lat: .9rem;
-        @cat-marg: .7rem;
-        font-size: 1.2rem;
-        font-family: 'Cuprum';
-        display: inline-flex;
-        padding: @cat-pad-lat @cat-pad-side @cat-pad-lat @cat-pad-side;
-        margin-left: @cat-marg;
-        vertical-align: middle;
-        background: @gray5;
-        border-radius: .4rem;
-        user-select: none;
-        &:hover {
-            @cat-pad-side: 3.15rem;
-            @cat-pad-lat: .85rem;
-            padding-left: @cat-pad-side;
-            padding-right: @cat-pad-side;
-            padding-top: @cat-pad-lat;
-            padding-bottom: @cat-pad-lat;
-            background: @gray7;
-            transition: 80ms;
-        }
-    }
-}
-
-.space {
-    margin-bottom: .5rem;
+  width: 40%;
 }
 
 a {
-    text-decoration: none;
-    color: @white;
+  text-decoration: none;
+  color: @white;
 }
 
 ::-webkit-scrollbar {
-    width: .4rem;
-    height: .6rem;
+  width: 0.4rem;
+  height: 0.6rem;
 }
 
 ::-webkit-scrollbar-track {
-    background: none;
-    border: none;
-    &:hover {
-        background: @scroll-shade;
-        border-radius: .3rem;
-        transition: 500ms;
-    }
+  background: none;
+  border: none;
+  &:hover {
+    background: @scroll-shade;
+    border-radius: 0.3rem;
+    transition: 500ms;
+  }
 }
 
 ::-webkit-scrollbar-thumb {
-    background: @accent-primary;
-    border-radius: .3rem;
-    &:hover {
-        background: @accent-secondary;
-        transition: 700ms;
-    }
+  background: @accent-primary;
+  border-radius: 0.3rem;
+  &:hover {
+    background: @accent-secondary;
+    transition: 700ms;
+  }
 }
 
 ::-webkit-scrollbar-corner {
-    background: transparent;
+  background: transparent;
 }
 
 center {
-    vertical-align: -webkit-baseline-middle;
+  vertical-align: -webkit-baseline-middle;
 }
 
 .content {
-    overflow: hidden;
-}
-
-.short_syn {
-    background: @gray7;
-    margin-top: .8rem;
-    padding-top: .8rem;
-    padding-bottom: .8rem;
-    border-radius: .5rem;
-}
-
-.home-desc {
-    background: @gray6;
-    margin-top: .8rem;
-    padding-top: .8rem;
-    padding-bottom: .8rem;
-    border-radius: .5rem;
+  overflow: hidden;
 }
 
 .infocard {
-    background: @gray5;
-    border-radius: .5rem;
-    padding: .5rem .5rem 0 .5rem;
-    margin-right: .4rem;
-    margin-bottom: .4rem;
-    margin-top: none;
-    float: left;
-    &.link {
-        width: 100%;
-    }
-    &>p {
-        font-size: x-large;
-    }
-}
-
-.quotes {
-    margin-bottom: .5rem;
-    border-radius: .5rem;
-}
-
-.quote {
-    width: 80%;
-}
-
-.logo {
-    height: 6rem;
-    padding-left: .7rem;
-}
-
-.ottercares {
-    width: 13rem;
-    padding-left: .7rem;
+  background: @gray5;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  margin-right: 0.4rem;
+  margin-bottom: 0.4rem;
+  margin-top: none;
+  float: left;
+  &.link {
+    width: 100%;
+  }
+  & > p {
+    font-size: x-large;
+  }
 }
 
 .linktext {
-    display: inline-block;
-    padding: .7rem 2rem 0 .7rem;
-    &>p {
-        font-size: x-large;
-    }
+  display: inline-block;
+  padding: 0.7rem 2rem 0 0.7rem;
+  & > p {
+    font-size: x-large;
+  }
 }
 
-.video-container {
-    background: @gray6;
-    margin-top: .8rem;
-    padding-top: .8rem;
-    padding-bottom: .8rem;
-    border-radius: .5rem;
-}
-
-.video {
-    width: 40rem;
-    height: 22.5rem;
-    transition: 500ms;
-    &:hover {
-        transition: 500ms;
-        width: 45rem;
-        height: 25.4rem;
-        box-shadow: -.3rem .3rem .1rem @gray4;
-    }
+.list {
+  margin-top: 0.5rem;
 }
 </style>

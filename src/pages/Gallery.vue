@@ -1,27 +1,32 @@
 <template>
-    <div class="content">
-        <center>
-            <div class="infocard"><img src="./../assets/ig/2.jpg" class="gimg"></div>
-            <div class="infocard"><img src="./../assets/ig/3.jpg" class="gimg"></div>
-            <div class="infocard"><img src="./../assets/ig/4.jpg" class="gimg"></div>
-            <div class="infocard"><img src="./../assets/ig/5.jpg" class="gimg"></div>
-        </center>
-    </div>
+  <div class="content list">
+    <title>LHR - Gallery</title>
+    <center>
+      <div class="infocard" v-for="picture of pictures" v-bind:key="picture">
+        <img :src="picture" class="gimg">
+      </div>
+    </center>
+  </div>
 </template>
 
 <script>
+import gallery_data from "./../data/gallery.js";
+
 export default {
-    name: "gallery"
-}
+  name: "gallery",
+  data() {
+    return gallery_data;
+  }
+};
 </script>
 
 <style lang="less">
 .gimg {
-    @gimg-pad: .5rem;
-    height: 20rem;
-    padding-top: @gimg-pad;
-    padding-bottom: @gimg-pad;
-    padding-right: @gimg-pad;
-    padding-left: @gimg-pad;
+  @gimg-pad: 0.5rem;
+  height: 20rem;
+  padding-top: @gimg-pad;
+  padding-bottom: @gimg-pad;
+  padding-right: @gimg-pad;
+  padding-left: @gimg-pad;
 }
 </style>

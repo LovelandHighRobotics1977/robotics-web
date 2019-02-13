@@ -3,14 +3,15 @@ import Router from "vue-router";
 Vue.use(Router);
 
 export default new Router({
-    routes: [{
+    routes: [
+        {
             path: "",
             redirect: "/Home"
         },
         {
             path: "/Home",
             name: "Home",
-            component: require("@/pages/Home").default
+            component: require("@/pages/Home").default,
         },
         {
             path: "/Gallery",
