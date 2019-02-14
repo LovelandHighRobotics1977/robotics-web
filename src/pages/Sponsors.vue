@@ -19,8 +19,6 @@ export default {
     List
   },
   mounted() {
-    console.log("Current Data: " + this.$data.sponsors);
-
     request(
       {
         method: "GET",
@@ -30,8 +28,6 @@ export default {
       (err, res, dat) => {
         let data = JSON.parse(dat);
         console.log("Error: " + err);
-        console.log("Res: " + res);
-        console.log("Out Data: " + data.sponsors);
         this.$data.sponsors = data.sponsors;
       }
     )
