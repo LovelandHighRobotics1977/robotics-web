@@ -24,19 +24,15 @@ export default {
     request(
       {
         method: "GET",
-        url: "https://raw.githack.com/LovelandHighRobotics1977/robotics-web/master/src/data/sponsors.json",
+        url: "http://raw.githack.com/LovelandHighRobotics1977/robotics-web/master/src/data/sponsors.json",
         encoding: null // <- this one is important !
       },
       (err, res, dat) => {
         let data = JSON.parse(dat);
         console.log("Error: " + err);
         console.log("Res: " + res);
-        console.log("Out Data: " + data);
-        if(this.$data.sponsors === data.sponsors) {
-          console.log("up to date");
-        } else {
-          this.$data.sponsors = data.sponsors;
-        }
+        console.log("Out Data: " + data.sponsors);
+        this.$data.sponsors = data.sponsors;
       }
     )
   }
