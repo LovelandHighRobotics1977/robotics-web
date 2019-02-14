@@ -39,7 +39,8 @@
       <center v-for="quote of quotes" v-bind:key="quote">
         <p class="quote">
           "{{ quote.text }}"
-          <br>- {{ quote.author.title }}, {{ quote.author.name }} ({{ quote.author.grad }} grad)
+          <br>
+          - {{ quote.author.title }}, {{ quote.author.name }} ({{ quote.author.grad }} grad)
         </p>
       </center>
     </div>
@@ -84,6 +85,8 @@ export default {
   background: @gray6;
   margin-top: 0.8rem;
   padding-top: 0.8rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
   padding-bottom: 0.8rem;
   border-radius: 0.5rem;
 }
