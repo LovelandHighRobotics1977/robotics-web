@@ -20,6 +20,7 @@
 
 <script>
 import contact_data from "./../data/contact.js";
+import request from "request";
 
 export default {
   name: "contact",
