@@ -13,6 +13,11 @@
             "title": "Teachers",
             "width": 20,
             "info": ["Michael Pintaric", "Jenn Hall"]
+        },
+        {
+            "title": "Tester",
+            "width": 10,
+            "info": ["TEst", "TEst2 | bleh"]
         }
     ]
 }
