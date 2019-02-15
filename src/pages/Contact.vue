@@ -25,6 +25,20 @@ export default {
   name: "contact",
   data() {
     return contact_data;
+  },
+  mounted() {
+    request(
+      {
+        method: "GET",
+        url: "https://raw.githack.com/LovelandHighRobotics1977/robotics-web/master/src/data/contact.json",
+        encoding: null // <- this one is important !
+      },
+      (err, res, dat) => {
+        let data = JSON.parse(dat);
+        console.log("Error: " + err);
+        this.$data.cards = data.cards;
+      }
+    )
   }
 };
 </script>

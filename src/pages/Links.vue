@@ -17,6 +17,20 @@ export default {
   },
   components: {
     List
+  },
+  mounted() {
+    request(
+      {
+        method: "GET",
+        url: "https://raw.githack.com/LovelandHighRobotics1977/robotics-web/master/src/data/links.json",
+        encoding: null // <- this one is important !
+      },
+      (err, res, dat) => {
+        let data = JSON.parse(dat);
+        console.log("Error: " + err);
+        this.$data.links = data.links;
+      }
+    )
   }
 };
 </script>

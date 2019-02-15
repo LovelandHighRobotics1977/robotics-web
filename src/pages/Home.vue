@@ -60,13 +60,13 @@ export default {
     request(
       {
         method: "GET",
-        url: "http://raw.githack.com/LovelandHighRobotics1977/robotics-web/master/src/data/gallery.json",
+        url: "https://raw.githack.com/LovelandHighRobotics1977/robotics-web/master/src/data/home.json",
         encoding: null // <- this one is important !
       },
       (err, res, dat) => {
         let data = JSON.parse(dat);
         console.log("Error: " + err);
-        this.$data.pictures = data.pictures;
+        this.$data = data;
       }
     )
   }
