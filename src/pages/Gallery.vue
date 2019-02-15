@@ -21,43 +21,18 @@ export default {
     return gallery_data;
   },
   mounted() {
-    let images = [];
     request(
       {
         method: "GET",
-        url: "https://crossorigin.me/https://imgur.com/a/LlEXCEl/zip",
+        url: "http://raw.githack.com/LovelandHighRobotics1977/robotics-web/master/src/data/gallery.json",
         encoding: null // <- this one is important !
       },
-      function(error, response, body) {
-        console.log("it works! " + response + " - " + body);
-        console.log(error);
-        if (error || response.statusCode !== 200) {
-          // handle error
-          return;
-        }
-        jszip
-          .loadAsync(body)
-          .then(function(zip) {
-            return zip.file("1 - i791PTa.jpg").async("string");
-          })
-          .then(function() {
-            console.log(text);
-          });
+      (err, res, dat) => {
+        let data = JSON.parse(dat);
+        console.log("Error: " + err);
+        this.$data.pictures = data.pictures;
       }
-    );
-    /*JSZipUtils.getBinaryContent("", function(err, data) {
-      if (err) {
-        console.log(err);
-      }
-
-      return jszip.loadAsync(data).then(function(zip) {
-        let returned_images = zip.file(/[0-9] - \w\w\w\w\w\w\w\.jpg/);
-        for ((image, index) of returned_images) {
-          images.push(image);
-          if(index == zip.file(/[0-9] - \w\w\w\w\w\w\w\.jpg/).length-1) console.log(images);
-        }
-      });
-    });*/
+    )
   }
 };
 </script>

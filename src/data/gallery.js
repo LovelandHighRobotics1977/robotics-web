@@ -1,13 +1,8 @@
-import ig1 from "./../assets/ig/2.jpg"
-import ig2 from "./../assets/ig/3.jpg"
-import ig3 from "./../assets/ig/4.jpg"
-import ig4 from "./../assets/ig/5.jpg"
-
 export default {
     pictures: [
-        ig1,
-        ig2,
-        ig3,
-        ig4
+        "https://rawcdn.githack.com/LovelandHighRobotics1977/robotics-web/4c00a64f097aea572fb4e1074c1e8098221d91ce/src/assets/ig/2.jpg",
+        "https://rawcdn.githack.com/LovelandHighRobotics1977/robotics-web/4c00a64f097aea572fb4e1074c1e8098221d91ce/src/assets/ig/3.jpg",
+        "https://rawcdn.githack.com/LovelandHighRobotics1977/robotics-web/4c00a64f097aea572fb4e1074c1e8098221d91ce/src/assets/ig/4.jpg",
+        "https://rawcdn.githack.com/LovelandHighRobotics1977/robotics-web/4c00a64f097aea572fb4e1074c1e8098221d91ce/src/assets/ig/5.jpg"
     ]
 }
