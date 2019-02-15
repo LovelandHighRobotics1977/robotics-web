@@ -1,28 +1,22 @@
-import insta_logo from "./../assets/images/insta-logo.svg";
-import fb_logo from "./../assets/images/facebook-logo.svg";
-import twitter_logo from "./../assets/images/twitter-logo.svg";
-import loveland_logo from "./../assets/images/loveland-logo.svg";
-import first_logo from "./../assets/images/first-logo.svg";
-
 export default {
     links: [
         {
-            logo: insta_logo,
+            logo: "https://rawcdn.githack.com/LovelandHighRobotics1977/robotics-web/a2f4daa3c6e79efa965e88c8457882b751748bf9/src/assets/images/insta-logo.svg",
             url: "https://www.instagram.com/roboticsoflhs/",
             title: "Instagram"
         },
         {
-            logo: fb_logo,
+            logo: "https://rawcdn.githack.com/LovelandHighRobotics1977/robotics-web/a2f4daa3c6e79efa965e88c8457882b751748bf9/src/assets/images/facebook-logo.svg",
             url: "https://www.facebook.com/LHRobotics/",
             title: "Facebook"
         },
         {
-            logo: twitter_logo,
+            logo: "https://rawcdn.githack.com/LovelandHighRobotics1977/robotics-web/a2f4daa3c6e79efa965e88c8457882b751748bf9/src/assets/images/twitter-logo.svg",
             url: "https://twitter.com/roboticsofLHS",
             title: "Twitter"
         },
         {
-            logo: loveland_logo,
+            logo: "https://rawcdn.githack.com/LovelandHighRobotics1977/robotics-web/a2f4daa3c6e79efa965e88c8457882b751748bf9/src/assets/images/loveland-logo.svg",
             url: "https://www.thompsonschools.org/loveland",
             title: "Loveland",
             description: [
@@ -30,7 +24,7 @@ export default {
             ]
         },
         {
-            logo: first_logo,
+            logo: "https://rawcdn.githack.com/LovelandHighRobotics1977/robotics-web/a2f4daa3c6e79efa965e88c8457882b751748bf9/src/assets/images/first-logo.svg",
             url: "https://www.firstinspires.org/robotics/frc",
             title: "FIRST Robotics",
             description: [

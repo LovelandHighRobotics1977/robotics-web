@@ -12,8 +12,6 @@
 <script>
 import gallery_data from "./../data/gallery.js";
 import request from "request";
-import jszip from "jszip";
-import jsziputils from "jszip-utils";
 
 export default {
   name: "gallery",

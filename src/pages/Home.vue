@@ -49,11 +49,26 @@
 
 <script>
 import home_data from "./../data/home.js";
+import request from "request";
 
 export default {
   name: "home",
   data() {
     return home_data;
+  },
+  mounted() {
+    request(
+      {
+        method: "GET",
+        url: "http://raw.githack.com/LovelandHighRobotics1977/robotics-web/master/src/data/gallery.json",
+        encoding: null // <- this one is important !
+      },
+      (err, res, dat) => {
+        let data = JSON.parse(dat);
+        console.log("Error: " + err);
+        this.$data.pictures = data.pictures;
+      }
+    )
   }
 };
 </script>
