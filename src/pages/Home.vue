@@ -66,7 +66,10 @@ export default {
       (err, res, dat) => {
         let data = JSON.parse(dat);
         console.log("Error: " + err);
-        this.$data = data;
+        this.$data.synopsis = data.synopsis;
+        this.$data.videoid = data.videoid;
+        this.$data.home_desc = data.home_desc;
+        this.$data.quotes = data.quotes;
       }
     )
   }
